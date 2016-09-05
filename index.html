@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  <!-- injector:css -->
+  <link rel="stylesheet" href="/app/app.css">
+  <!-- endinjector -->
+</head>
+<body>
+
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+
+  <header class = "navbar navbar-default navbar-fixed-top">
+    <span class="navbar-brand"><a ui-sref= "home">Task 2</a></span>
+    <ul class="nav navbar-nav">
+      <li><a ui-sref= "edit">Create</a></li>
+    </ul>
+  </header>
+  <div ui-view></div>
+
+
+  <!-- injector:bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/lodash/lodash.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="/bower_components/moment/moment.js"></script>
+  <!-- endinjector -->
+
+  <!-- injector:js -->
+  <script src="/app/app.js"></script>
+  <script src="/app/core/core.module.js"></script>
+  <script src="/app/user/user.module.js"></script>
+  <script src="/temp/templates.js"></script>
+  <script src="/app/config.js"></script>
+  <script src="/app/core/core.localStorageService.js"></script>
+  <script src="/app/user/userList/userList.controller.js"></script>
+  <script src="/app/user/userList/userListItem.directive.js"></script>
+  <script src="/app/user/userProfile/UserProfile.controller.js"></script>
+  <script src="/app/user/userProfile/userProfile.directive.js"></script>
+  <script src="/app/user/userProfile/userProfileCreate.controller.js"></script>
+  <!-- endinjector -->
+</body>
+</html>

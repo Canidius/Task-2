@@ -1,0 +1,7 @@
+.container
+  .row
+    .center-block.col-sm-8.col-sm-push-2
+      ul.list-group
+        li.list-group-item(ng-repeat='user in userList.users track by $index')
+          user-list-item(user='user')
+      button.btn.btn-danger(ng-click='userList.delete()') Delete

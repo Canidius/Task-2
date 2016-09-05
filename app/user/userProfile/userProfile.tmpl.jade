@@ -1,0 +1,28 @@
+.container
+	.row
+		.center-block.col-sm-8.col-sm-push-2
+			.panel.panel-default
+				.panel-heading
+					h3 {{userProfile.user.surName}} {{userProfile.user.name}}
+				.panel-body
+					ul.list-group
+						li.list-group-item
+							b Name:  
+							|  {{userProfile.user.name}}
+						li.list-group-item
+							b Surname:  
+							|  {{userProfile.user.surName}}
+						li.list-group-item
+							b E-mail:  
+							|  {{userProfile.user.email}}
+						li.list-group-item
+							b Age:  
+							|  {{userProfile.user.dateOfBirth}}
+						li.list-group-item
+							b Gender:  
+							|  {{userProfile.user.gender}}
+						li.list-group-item
+							b About:  
+							|  {{userProfile.user.about}}
+			button.btn.btn-primary(ui-sref='edit({id:user.login})') Edit
+

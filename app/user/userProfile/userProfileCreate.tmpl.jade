@@ -1,0 +1,32 @@
+.container
+	.row
+		.center-block.col-sm-8.col-sm-push-2
+			form
+				.form-group
+					label(for='Name') Name
+					input.form-control(type='text' name='Name' placeholder='Write your Name' ng-model='userProfile.user.name')
+				.form-group
+					label(for='Surname') Surname
+					input.form-control(type='text' name='Surname' placeholder='Write your Surname' ng-model='userProfile.user.surName')
+				.form-group
+					label(for='Password') Password
+					input.form-control(type='password' name='password' placeholder='Write your Password' ng-model='userProfile.user.password')
+				.form-group
+					label(for='Email') E-mail
+					input.form-control(type='email' name='Email' placeholder='Write your Email' ng-model='userProfile.user.email')
+				.form-group
+					label(for='Date') Date of Birth
+					input.form-control(type='date' name='Date' ng-model='userProfile.user.dateOfBirth')
+				.form-group
+					label(for='Gender') Gender
+
+						input(type='radio' name='Gender' value='male' ng-model='userProfile.user.gender') 
+						|	Male
+
+						input(type='radio' name='Gender' value='female' ng-model='userProfile.user.gender') 
+						|	Female
+				.form-group
+					label(for='About') About You
+					textarea.form-control(name='About' placeholder='place some text about you' rows='5' ng-model='userProfile.user.about')
+				button.btn.btn-success(ng-click='userProfile.create(userProfile.user)') Create
+				button.btn.btn-success(ng-click='user.Edit()') Edit
